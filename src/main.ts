@@ -11,15 +11,15 @@ export class QueueDynamic {
     enqueue(v) {
         this.count++;
 
-        let newPerson = new Node();
-        newPerson.value = v;
+        let newNode = new Node();
+        newNode.value = v;
 
         if (!this.first) {
-            this.first = newPerson;
-            this.last = newPerson;
+            this.first = newNode;
+            this.last = newNode;
         } else {
-            this.last.next = newPerson;
-            this.last = newPerson;
+            this.last.next = newNode;
+            this.last = newNode;
         }
     }
     dequeue() {
