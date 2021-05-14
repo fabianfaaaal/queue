@@ -1,17 +1,17 @@
-class Person {
-    next: Person;
+class Node {
+    next: Node;
     value: any;
 }
 
 export class QueueDynamic {
-    first: Person = null;
-    last: Person = null;
+    first: Node = null;
+    last: Node = null;
     count: number = 0;
 
     enqueue(v) {
         this.count++;
 
-        let newPerson = new Person();
+        let newPerson = new Node();
         newPerson.value = v;
 
         if (!this.first) {
